@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(44, 42, 42);
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
+  height: 170px;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.search input {
+  width: 400px;
+  height: 37px;
+  background-color: white;
+  border-radius: 10px 0px 0px 10px;
+  padding: 2px 16px;
+  color: black;
+  border: none;
+}
+
+.search button {
+  width: 93px;
+  height: 37px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #51c5c5d4;
+  border: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 500px;
+  width: 100vw;
+  margin-top: 10px;
+}
+
+.container .card {
+  height: 500px;
+  width: 700px;
+  border-radius: 19px;
+  box-shadow: 10px 10px 10px 10px;
+}
+
+.container .weather-icon {
+  height: 170px;
+  width: 700px;
+  border-bottom: 1px solid pink;
+  font-size: 109px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.container .card .weather-info {
+  height: 174px;
+  width: 700px;
+  display: flex;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.container .card .weather-info .temperature {
+  flex-basis: 250px;
+  flex-shrink: 1;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container .card .weather-info .description {
+  flex-basis: 250px;
+  flex-shrink: 1;
+  color: white;
+}
+.container .card .weather-info .date-info {
+  height: 174px;
+  width: 291px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  background-color: #51c5c5d4;
+}
+.container .card .weather-info .date-info div{
+    padding: 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .card .extra-temp-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 156px;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.container .card .extra-temp-info .temp-info {
+  display: flex;
+  gap: 25px;
+}
+
+.container .card .extra-temp-info .icon {
+  font-size: 35px;
+  color: #51c5c5d4; ;
 }
